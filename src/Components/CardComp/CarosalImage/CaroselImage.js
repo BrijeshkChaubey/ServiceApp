@@ -7,25 +7,21 @@ import {
   useWindowDimensions,
   ImageBackground,
 } from 'react-native';
-import { Colorss } from '../../../Constants/Color';
-import { styles } from './styles';
+import {Colorss} from '../../../Constants/Color';
+import {styles} from './styles';
 
 export const Carosalimagescreen = (...props) => {
-   
   const [activeIndex, setActiveIndex] = useState(0);
   const windowWidth = useWindowDimensions().width;
-  const data=props[0].data[0].image
- 
-  
+  const data = props[0].data[0].image;
+
   const onFlatlistUpdate = useCallback(({viewableItems}) => {
     if (viewableItems.length > 0) {
       setActiveIndex(viewableItems[0].index || 0);
     }
-   
   }, []);
 
   return (
-   
     <View style={styles.root}>
       <FlatList
         data={data}
@@ -52,15 +48,13 @@ export const Carosalimagescreen = (...props) => {
             style={[
               styles.dot,
               {
-                backgroundColor: index === activeIndex ? Colorss.Light_Blue : Colorss.grey,
+                backgroundColor:
+                  index === activeIndex ? Colorss.Light_Blue : Colorss.grey,
               },
             ]}
           />
         ))}
       </View>
     </View>
-   
-    
   );
 };
-

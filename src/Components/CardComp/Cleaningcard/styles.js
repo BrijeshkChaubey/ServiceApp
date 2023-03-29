@@ -1,6 +1,6 @@
 import {StyleSheet} from 'react-native';
-import { Colorss } from '../../../Constants/Color';
-import { hp, wp } from '../../../Constants/Dimension';
+import {Colorss} from '../../../Constants/Color';
+import {hp, wp} from '../../../Constants/Dimension';
 export const styles = StyleSheet.create({
   root: {
     borderRadius: 10,
@@ -19,20 +19,19 @@ export const styles = StyleSheet.create({
     borderRadius: 10,
   },
   title: {
-    fontWeight:'bold'
-    ,color:Colorss.Black
+    fontWeight: 'bold',
+    color: Colorss.Black,
   },
-  servicetype:{
-    fontWeight:'500'
-    ,color:Colorss.grey
+  servicetype: {
+    fontWeight: '500',
+    color: Colorss.grey,
   },
-  innerroot:{
-    flexDirection:'row'
+  innerroot: {
+    flexDirection: 'row',
   },
-  startText:
-  {fontWeight:'400',
-  color:Colorss.light_grey},
-  Money:{
-  fontWeight:'bold'
-  ,color:Colorss.Green}
+  startText: {fontWeight: '400', color: Colorss.light_grey},
+  Money: {
+    fontWeight: 'bold',
+    color: Colorss.Green,
+  },
 });

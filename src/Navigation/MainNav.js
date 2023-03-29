@@ -1,12 +1,12 @@
 import * as React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
+import {NavigationContainer} from '@react-navigation/native';
 import BottomNav from './BottomNav';
 
- const MainNav=()=> {
+const MainNav = () => {
   return (
     <NavigationContainer>
-        <BottomNav/>
+      <BottomNav />
     </NavigationContainer>
   );
-}
-export default MainNav
+};
+export default MainNav;

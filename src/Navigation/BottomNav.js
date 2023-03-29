@@ -1,4 +1,4 @@
-import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
+import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
 import HomeScreen from '../Screens/HomeScreen/HomeScreen';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Fontisto from 'react-native-vector-icons/Fontisto';
@@ -9,39 +9,53 @@ import Profile from '../Screens/Profile/Profile';
 
 const Tab = createMaterialBottomTabNavigator();
 
-const BottomNav=()=> {
+const BottomNav = () => {
   return (
     <Tab.Navigator
-    initialRouteName="Home"
-    activeColor="#0096ff"
-    barStyle={{ backgroundColor: 'white' }}>
-        
-      <Tab.Screen name="Home" component={HomeScreen} options={{
+      initialRouteName="Home"
+      activeColor="#0096ff"
+      barStyle={{backgroundColor: 'white'}}>
+      <Tab.Screen
+        name="Home"
+        component={HomeScreen}
+        options={{
           tabBarLabel: 'Home',
-          tabBarIcon: ({ color }) => (
+          tabBarIcon: ({color}) => (
             <MaterialCommunityIcons name="home" color={color} size={26} />
           ),
-        }} />
-         <Tab.Screen name="Search" component={Search} options={{
+        }}
+      />
+      <Tab.Screen
+        name="Search"
+        component={Search}
+        options={{
           tabBarLabel: 'Search',
-          tabBarIcon: ({ color }) => (
+          tabBarIcon: ({color}) => (
             <Fontisto name="search" color={color} size={26} />
           ),
-        }} />
-           <Tab.Screen name="Booking" component={Booking} options={{
+        }}
+      />
+      <Tab.Screen
+        name="Booking"
+        component={Booking}
+        options={{
           tabBarLabel: 'Booking',
-          tabBarIcon: ({ color }) => (
+          tabBarIcon: ({color}) => (
             <MaterialCommunityIcons name="calendar" color={color} size={26} />
           ),
-        }} />
-           <Tab.Screen name="Profile" component={Profile} options={{
+        }}
+      />
+      <Tab.Screen
+        name="Profile"
+        component={Profile}
+        options={{
           tabBarLabel: 'Profile',
-          tabBarIcon: ({ color }) => (
+          tabBarIcon: ({color}) => (
             <AntDesign name="user" color={color} size={26} />
           ),
-        }} />
-      
+        }}
+      />
     </Tab.Navigator>
   );
-}
+};
 export default BottomNav;
